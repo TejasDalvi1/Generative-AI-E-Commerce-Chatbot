@@ -10,7 +10,7 @@
         (5)Flask
         (6)HTML,CSS
 -------------------------------------------------------------------------------
-## Steps to run:
+## Steps to run in local setup:
 
 ### (1) Create Environment
 ```bash
@@ -46,5 +46,64 @@ python app.py
 ### (6) Click on the link got after step (6):
 ```bash
 open up localhost:
+```
+===============================================================================
+## How to Deploy this app on AWS EC2:
+
+### (1) Login into your AWS console and launch an EC2 instance
+### (2) Run the following commands (Note: Do the port mapping)
+
+```bash
+sudo apt update
+```
+
+```bash
+sudo apt-get update
+```
+
+```bash
+sudo apt upgrade -y
+```
+
+```bash
+sudo apt install git curl unzip tar make sudo vim wget -y
+```
+
+```bash
+git clone "Github-URL-of-Your-repository"
+```
+```bash
+touch .env
+```
+```bash
+vim .env
+# Here add following credentials
+#OPENAI_API_KEY="****"
+#ASTRA_DB_API_ENDPOINT="****"
+#ASTRA_DB_APPLICATION_TOKEN="****"
+#ASTRA_DB_KEYSPACE="****"
+```
+```bash
+sudo apt install python3-pip
+```
+```bash
+sudo apt install python3-venv
+```
+```bash
+python3 -m venv .venv
+```
+```bash
+source .venv/bin/activate
+```
+```bash
+pip3 install -r requirements.txt
+```
+```bash
+#Temporary running
+python3 app.py
+```
+```bash
+#Temporary running
+nohop python3 app.py
 ```
 -------------------------------------------------------------------------------
