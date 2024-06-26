@@ -103,7 +103,7 @@ pip3 install -r requirements.txt
 python3 app.py
 ```
 ```bash
-#Temporary running
+#Permanent running
 nohop python3 app.py
 ```
 -------------------------------------------------------------------------------
